@@ -1205,14 +1205,14 @@ public class BitcoinNetworkService extends AbstractService {
         // Extract the public key hash from the script
         byte[] pubkeyHash = script.getPubKeyHash();
         key = Optional.fromNullable(activeKeyChain.findKeyFromPubHash(pubkeyHash));
-        address = Optional.fromNullable(new Address(MainNetParams.get(), pubkeyHash));
+        address = Optional.fromNullable(new Address(networkParameters, pubkeyHash));
       } else {
 
         // Use the public key hash
         byte[] pubkeyHash = script.getPubKeyHash();
         if (wallet.isPubKeyHashMine(pubkeyHash)) {
           key = Optional.fromNullable(activeKeyChain.findKeyFromPubHash(pubkeyHash));
-          address = Optional.fromNullable(new Address(MainNetParams.get(), pubkeyHash));
+          address = Optional.fromNullable(new Address(networkParameters, pubkeyHash));
         }
       }
 
