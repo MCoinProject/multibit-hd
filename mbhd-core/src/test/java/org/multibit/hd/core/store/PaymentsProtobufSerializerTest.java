@@ -46,7 +46,7 @@ public class PaymentsProtobufSerializerTest {
 
     PaymentRequestData paymentRequestData1 = new PaymentRequestData();
 
-    paymentRequestData1.setAddress(Addresses.parse("1AhN6rPdrMuKBGFDKR1k9A8SCLYaNgXhty").get());
+    paymentRequestData1.setAddress(Addresses.parse("LUvKN4hTw29NS4wNVZ13RBCCQYurRaoLz9").get());
     paymentRequestData1.setAmountCoin(Coin.valueOf(245));
     DateTime date1 = new DateTime();
     paymentRequestData1.setDate(date1);
@@ -61,7 +61,7 @@ public class PaymentsProtobufSerializerTest {
     fiatPayment1.setExchangeName(Optional.of("Bitstamp"));
 
     PaymentRequestData paymentRequestData2 = new PaymentRequestData();
-    paymentRequestData2.setAddress(Addresses.parse("1AhN6rPdrMuKBGFDKR1k9A8SCLYaNgXhty").get());
+    paymentRequestData2.setAddress(Addresses.parse("LUvKN4hTw29NS4wNVZ13RBCCQYurRaoLz9").get());
     paymentRequestData2.setAmountCoin(Coin.valueOf(789));
     DateTime date2 = date1.plusDays(7);
     paymentRequestData2.setDate(date2);

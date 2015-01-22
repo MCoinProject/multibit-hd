@@ -21,7 +21,7 @@ public class BitcoinMessagesTest {
   public void testFormatAsBitcoinSignedMessage() throws Exception {
 
     String actual = BitcoinMessages.formatAsBitcoinSignedMessage(
-      "16R2kAxaUNM4xj6ykKbxEugpJdYyJzTP13",
+      "LQdz1PGQZ2b8DXo8vTbFWvkaWqvFTag3xt",
       "Hello World",
       "H0b22gIQIfutUzm7Z9qchdfhUtaO52alhNPK3emrkGOfbOzGHVPuWD9rMIphxniwBNgF/YN4c5C/dMwXz3yJz5k="
     );
@@ -59,7 +59,7 @@ public class BitcoinMessagesTest {
     BitcoinMessages.SignedMessage actual = BitcoinMessages.parseSignedMessage(Optional.of(signatureBlock));
 
     assertThat(actual.getMessage()).isEqualTo("Hello World");
-    assertThat(actual.getAddress()).isEqualTo("16R2kAxaUNM4xj6ykKbxEugpJdYyJzTP13");
+    assertThat(actual.getAddress()).isEqualTo("LQdz1PGQZ2b8DXo8vTbFWvkaWqvFTag3xt");
     assertThat(actual.getSignature()).isEqualTo("H0b22gIQIfutUzm7Z9qchdfhUtaO52alhNPK3emrkGOfbOzGHVPuWD9rMIphxniwBNgF/YN4c5C/dMwXz3yJz5k=");
     assertThat(actual.getVersion()).startsWith("MultiBit HD");
     assertThat(actual.getComment()).isEqualTo("https://multibit.org");

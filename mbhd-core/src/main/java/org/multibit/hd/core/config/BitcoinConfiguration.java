@@ -24,7 +24,7 @@ public class BitcoinConfiguration {
    * Always use MainNet unless specified otherwise
    * Support for other networks requires a code change in BitcoinNetwork
    */
-  private String bitcoinNetwork = "MAIN_NET";
+  private String bitcoinNetwork = "LITECOIN_MAIN";
 
   private String decimalSeparator = ".";
   private String groupingSeparator = ",";

@@ -2,6 +2,7 @@ package org.multibit.hd.core.utils;
 
 import org.bitcoinj.core.NetworkParameters;
 import org.bitcoinj.params.MainNetParams;
+import org.litecoinj.integrations.LitecoinNetParameters;
 import org.multibit.hd.core.config.Configurations;
 
 import java.util.Locale;
@@ -43,7 +44,8 @@ public enum BitcoinNetwork {
    * You will need to modify the get() switch to include this value
    * This is done to ensure that only developers are using this network.
    */
-  REG_TEST
+  REG_TEST,
+  LITECOIN_MAIN
 
   // End of enum
   ;
@@ -56,6 +58,8 @@ public enum BitcoinNetwork {
     switch (this) {
       case MAIN_NET:
         return MainNetParams.get();
+      case LITECOIN_MAIN:
+        return LitecoinNetParameters.get();
       default:
         throw new IllegalStateException("Unknown entry: " + this.name());
     }
@@ -77,7 +81,7 @@ public enum BitcoinNetwork {
 
     if (Configurations.currentConfiguration == null) {
       // We should only be in this situation during testing
-      return BitcoinNetwork.MAIN_NET;
+      return BitcoinNetwork.LITECOIN_MAIN;
     }
 
     return BitcoinNetwork.of(

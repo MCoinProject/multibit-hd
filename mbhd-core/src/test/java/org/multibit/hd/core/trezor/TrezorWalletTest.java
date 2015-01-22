@@ -55,34 +55,34 @@ public class TrezorWalletTest {
     // and, for addresses 5 to 9, multibit-hardware
 
     // m/44h/0h/0h/0/0
-    private static final String SNIFF_EXPECTED_ADDRESS_0 = "1MkTpZN4TpLwJjZt9zHBXREJA8avUHXB3q";
+    private static final String SNIFF_EXPECTED_ADDRESS_0 = "LfyR5mftYUazZYG3L8GUoSJ4NLxCWiMbAd";
 
     // m/44h/0h/0h/0/1
-    private static final String SNIFF_EXPECTED_ADDRESS_1 = "1WGmwv86m1fFNVDRQ2YagdAFCButd36SV";
+    private static final String SNIFF_EXPECTED_ADDRESS_1 = "LKjE3ADxBRFiWBBNbY1qrhgvTQZBxaPDJ3";
 
     // m/44h/0h/0h/0/2
-    private static final String SNIFF_EXPECTED_ADDRESS_2 = "1PP1BvDeXjUcPDiEHBPWptQBAukhAwsLFt";
+    private static final String SNIFF_EXPECTED_ADDRESS_2 = "LhbxT8XUcPife2QPTKNp6uTwP87yKAtMF1";
 
     // m/44h/0h/0h/0/3
-    private static final String SNIFF_EXPECTED_ADDRESS_3 = "128f69V7GRqNSKwrjMkcuB6dbFKKEPtaLC";
+    private static final String SNIFF_EXPECTED_ADDRESS_3 = "LLMcMMnwM65Rh8e1uVjvBCAPoTgbGHA8Lx";
 
     // m/44h/0h/0h/0/4
-    private static final String SNIFF_EXPECTED_ADDRESS_4 = "18dxk72otf2amyAsjiKnEWhox5CJGQHYGA";
+    private static final String SNIFF_EXPECTED_ADDRESS_4 = "LSrv1KLdyKGe2ms2urK5WXmaAHZaSUeMF9";
 
     // m/44h/0h/0h/0/5
-    private static final String SNIFF_EXPECTED_ADDRESS_5 = "178nhbLCC4qZgb9YeJ8tkEhbzX6GBwhrBk";
+    private static final String SNIFF_EXPECTED_ADDRESS_5 = "LRMjxoe2Gj5cwPqhpS8C2FmNCjTYEz1AxR";
 
     // m/44h/0h/0h/0/6
-    private static final String SNIFF_EXPECTED_ADDRESS_6 = "1E798BoJxCu94m6Y2Y88WnyXGhLzjyx2yz";
+    private static final String SNIFF_EXPECTED_ADDRESS_6 = "LYL6PQ792s9CKZnhCg7Rnp3HUuiGpfG1Bt";
 
     // m/44h/0h/0h/0/7
-    private static final String SNIFF_EXPECTED_ADDRESS_7 = "1GRKMgdf8XcyVMZdaNmbotTWQBQ2wrAQ8A";
+    private static final String SNIFF_EXPECTED_ADDRESS_7 = "LaeGctwVDBs2kAFnkWku5uXGcPmK51YW76";
 
     // m/44h/0h/0h/0/8
-    private static final String SNIFF_EXPECTED_ADDRESS_8 = "17mmU5aa1ZmXB6DXu6w1Ypfnkra3thP5VJ";
+    private static final String SNIFF_EXPECTED_ADDRESS_8 = "LRzijHtQ6E1aRtuh5EvJpqjYy4wL3cUezn";
 
     // m/44h/0h/0h/0/9
-    private static final String SNIFF_EXPECTED_ADDRESS_9 = "1LrsPGpBhzMtTM5f9sfGj3LEfCSZRcGXmd";
+    private static final String SNIFF_EXPECTED_ADDRESS_9 = "Lf5peV81nebwi9mpL1ea14PzsQoqb9B6rL";
 
     @Before
     public void setUp() throws Exception {

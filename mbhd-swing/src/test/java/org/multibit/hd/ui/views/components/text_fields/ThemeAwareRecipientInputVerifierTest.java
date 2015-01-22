@@ -70,7 +70,7 @@ public class ThemeAwareRecipientInputVerifierTest {
     comboBox.setSelectedItem("1AhN6rPdrMuKBGFDKR1k9A8SCLYa");
     assertThat(testObject.verify(comboEditor)).isFalse();
 
-    comboBox.setSelectedItem("1AhN6rPdrMuKBGFDKR1k9A8SCLYaNgXhty");
+    comboBox.setSelectedItem("LUvKN4hTw29NS4wNVZ13RBCCQYurRaoLz9");
     assertThat(testObject.verify(comboEditor)).isTrue();
 
     // Use a public domain P2SH address
@@ -101,7 +101,7 @@ public class ThemeAwareRecipientInputVerifierTest {
     RecipientComboBoxEditor.RecipientComboBoxTextField comboEditor = ((RecipientComboBoxEditor.RecipientComboBoxTextField) comboBox.getEditor().getEditorComponent());
 
     // Act
-    comboBox.setSelectedItem(new Recipient(new Address(networkParameters, "1AhN6rPdrMuKBGFDKR1k9A8SCLYaNgXhty")));
+    comboBox.setSelectedItem(new Recipient(new Address(networkParameters, "LUvKN4hTw29NS4wNVZ13RBCCQYurRaoLz9")));
     assertThat(testObject.verify(comboEditor)).isTrue();
 
 

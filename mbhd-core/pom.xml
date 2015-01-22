@@ -462,6 +462,12 @@
       <version>${jackson.version}</version>
     </dependency>
 
+    <dependency>
+    	<groupId>org.litecoinj</groupId>
+	<artifactId>integrations</artifactId>
+	<version>0.1-SNAPSHOT</version>
+    </dependency>
+
   </dependencies>
 
 </project>

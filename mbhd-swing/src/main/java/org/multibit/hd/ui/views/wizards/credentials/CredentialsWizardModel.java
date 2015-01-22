@@ -10,7 +10,6 @@ import org.bitcoinj.core.ECKey;
 import org.bitcoinj.crypto.ChildNumber;
 import org.bitcoinj.crypto.DeterministicHierarchy;
 import org.bitcoinj.crypto.DeterministicKey;
-import org.bitcoinj.params.MainNetParams;
 import org.bitcoinj.wallet.KeyChain;
 import org.joda.time.DateTime;
 import org.multibit.hd.core.concurrent.SafeExecutors;
@@ -25,6 +24,7 @@ import org.multibit.hd.core.exceptions.WalletLoadException;
 import org.multibit.hd.core.managers.InstallationManager;
 import org.multibit.hd.core.managers.WalletManager;
 import org.multibit.hd.core.services.CoreServices;
+import org.multibit.hd.core.utils.BitcoinNetwork;
 import org.multibit.hd.core.utils.Dates;
 import org.multibit.hd.hardware.core.HardwareWalletService;
 import org.multibit.hd.hardware.core.events.HardwareWalletEvent;
@@ -812,7 +812,7 @@ public class CredentialsWizardModel extends AbstractHardwareWalletWizardModel<Cr
 
           // Calculate the address
           ECKey seedKey = ECKey.fromPublicOnly(childKey.getPubKey());
-          Address walletKeyAddress = new Address(MainNetParams.get(), seedKey.getPubKeyHash());
+          Address walletKeyAddress = new Address(BitcoinNetwork.current().get(), seedKey.getPubKeyHash());
 
           log.info("Path {}/0/0 has address: '{}'", parentKey.getPathAsString(), walletKeyAddress.toString());
 

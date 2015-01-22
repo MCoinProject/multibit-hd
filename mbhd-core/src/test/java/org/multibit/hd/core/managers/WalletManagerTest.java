@@ -28,6 +28,7 @@ import org.bitcoinj.wallet.KeyChain;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.litecoinj.integrations.LitecoinNetParameters;
 import org.multibit.hd.brit.seed_phrase.Bip39SeedPhraseGenerator;
 import org.multibit.hd.brit.seed_phrase.SeedPhraseGenerator;
 import org.multibit.hd.core.config.Configurations;
@@ -78,12 +79,12 @@ public class WalletManagerTest {
   // The generated Trezor addresses for the 'Abandon' wallet
   public final static String TREZOR_ADDRESS_M_44H_0H_0H_0_0 = "1LqBGSKuX5yYUonjxT5qGfpUsXKYYWeabA";  // Receiving funds
   public final static String TREZOR_ADDRESS_M_44H_0H_0H_1_0 = "1J3J6EvPrv8q6AC3VCjWV45Uf3nssNMRtH";  // Change
-  public final static String TREZOR_ADDRESS_M_44H_0H_0H_0_1 = "1Ak8PffB2meyfYnbXZR9EGfLfFZVpzJvQP";
-  public final static String TREZOR_ADDRESS_M_44H_0H_0H_1_1 = "13vKxXzHXXd8HquAYdpkJoi9ULVXUgfpS5";
-  public final static String TREZOR_ADDRESS_M_44H_0H_0H_0_2 = "1MNF5RSaabFwcbtJirJwKnDytsXXEsVsNb";
-  public final static String TREZOR_ADDRESS_M_44H_0H_0H_1_2 = "1M21Wx1nGrHMPaz52N2En7c624nzL4MYTk";
-  public final static String TREZOR_ADDRESS_M_44H_0H_0H_0_3 = "1MVGa13XFvvpKGZdX389iU8b3qwtmAyrsJ";
-  public final static String TREZOR_ADDRESS_M_44H_0H_0H_1_3 = "1DzVLMA4HzjXPAr6aZoaacDPHXXntsZ2zL";
+  public final static String TREZOR_ADDRESS_M_44H_0H_0H_0_1 = "LUy5esy17Ru2vMUkhhQSWHj6sTvmypTd6p";
+  public final static String TREZOR_ADDRESS_M_44H_0H_0H_1_1 = "LN9HDkJ7cBsBYebKimp3apmugYrodS68zY";
+  public final static String TREZOR_ADDRESS_M_44H_0H_0H_0_2 = "LfbCLdkQfFVzsQaTtzJEboHk75toNNREKV";
+  public final static String TREZOR_ADDRESS_M_44H_0H_0H_1_2 = "LfExnAKcMWXQePgECW1Y48frEHAGV89TLm";
+  public final static String TREZOR_ADDRESS_M_44H_0H_0H_0_3 = "LfiDqDMMLbAsa5FnhB7SzVCMG4KAtSGDpk";
+  public final static String TREZOR_ADDRESS_M_44H_0H_0H_1_3 = "LYDSbZTtNeyadyYFkhnsrdH9Vju4zwN5FW";
 
   @Before
   public void setUp() throws Exception {
@@ -341,13 +342,13 @@ public class WalletManagerTest {
 
     // Address not in wallet
     ECKey ecKey = new ECKey();
-    String addressNotInWalletString = ecKey.toAddress(NetworkParameters.fromID(NetworkParameters.ID_MAINNET)).toString();
+    String addressNotInWalletString = ecKey.toAddress(LitecoinNetParameters.get()).toString();
 
     Wallet wallet = walletSummary.getWallet();
 
     // Create a signing key
     DeterministicKey key = wallet.freshReceiveKey();
-    Address signingAddress = key.toAddress(NetworkParameters.fromID(NetworkParameters.ID_MAINNET));
+    Address signingAddress = key.toAddress(LitecoinNetParameters.get());
 
     // Successfully sign the address
     log.debug("Expect successful signature");

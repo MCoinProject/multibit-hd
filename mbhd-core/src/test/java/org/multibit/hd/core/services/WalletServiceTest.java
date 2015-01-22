@@ -97,7 +97,7 @@ public class WalletServiceTest {
     // Create a new payment request
     PaymentRequestData paymentRequestData1 = new PaymentRequestData();
 
-    paymentRequestData1.setAddress(Addresses.parse("1AhN6rPdrMuKBGFDKR1k9A8SCLYaNgXhty").get());
+    paymentRequestData1.setAddress(Addresses.parse("LUvKN4hTw29NS4wNVZ13RBCCQYurRaoLz9").get());
     paymentRequestData1.setAmountCoin(Coin.valueOf(245));
     DateTime date1 = new DateTime();
     paymentRequestData1.setDate(date1);

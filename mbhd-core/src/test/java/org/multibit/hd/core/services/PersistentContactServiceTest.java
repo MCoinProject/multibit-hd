@@ -114,7 +114,7 @@ public class PersistentContactServiceTest {
     Contact newContact = contactService.newContact(newContactName);
     contactService.addAll(Lists.newArrayList(newContact));
 
-    newContact.setBitcoinAddress(Addresses.parse("1AhN6rPdrMuKBGFDKR1k9A8SCLYaNgXhty").get());
+    newContact.setBitcoinAddress(Addresses.parse("LUvKN4hTw29NS4wNVZ13RBCCQYurRaoLz9").get());
     newContact.setEmail("boppy");
     newContact.setExtendedPublicKey("soppy");
     newContact.setImagePath("sippy");
