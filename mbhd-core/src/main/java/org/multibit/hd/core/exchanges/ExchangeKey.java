@@ -47,23 +47,23 @@ public enum ExchangeKey {
   // BITCOIN_AVERAGE(BitcoinAverage.class.getName()), // Causes problems with enum creation
   // BITCOIN_CHARTS(BitcoinChartsExchange.class.getName()), // Aggregator over exchanges
   // BITCOINIUM(BitcoiniumExchange.class.getName()), // No currency pair lookup
-  BITCUREX(BitcurexExchange.class.getName()),
+  //-BITCUREX(BitcurexExchange.class.getName()),
   BITFINEX(BitfinexExchange.class.getName()),
   // BIT_KONAN(BitKonanExchange.class.getName()), // No market rates
-  BITMARKET(BitMarketExchange.class.getName()),
-  BITSTAMP(BitstampExchange.class.getName()),
+  //-BITMARKET(BitMarketExchange.class.getName()),
+  //-BITSTAMP(BitstampExchange.class.getName()),
   // BITTREX(BittrexExchange.class.getName()), // Rates broken
   // BITVC(BitVcExchange.class.getName()), // No exchange URL
   // BLOCKCHAIN(BlockchainExchange.class.getName()), // Not a rate supplier
   //BTC_CENTRAL(BTCCentralExchange.class.getName()),// No 2.1.0 release
   BTC_CHINA(BTCChinaExchange.class.getName()),
-  CAMPBX(CampBXExchange.class.getName()),
+  //-CAMPBX(CampBXExchange.class.getName()),
   BTC_E(BTCEExchange.class.getName()),
-  BTC_TRADE(BTCTradeExchange.class.getName()),
+  //-BTC_TRADE(BTCTradeExchange.class.getName()),
   BTER(BTERExchange.class.getName()),
   // CA_VIRTEX(VirtExExchange.class.getName()), // Broken
   CEXIO(CexIOExchange.class.getName()), // Weird GHS/NMC combo
-  COINBASE(CoinbaseExchange.class.getName()), // No dynamic currency pair lookup
+  //-COINBASE(CoinbaseExchange.class.getName()), // No dynamic currency pair lookup
   // COINSETTER(CoinSetterExchange.class.getName()),// No 2.1.0 release
   // COINFLOOR(CoinfloorExchange.class.getName()), // Requires non-trivial registration
   CRYPTONIT(CryptonitExchange.class.getName()),
@@ -73,10 +73,10 @@ public enum ExchangeKey {
   // IT_BIT(ItBitExchange.class.getName()),// No working feed
   // JUSTCOIN(JustcoinExchange.class.getName()), // No exchange URL at 2.1.0
   KRAKEN(KrakenExchange.class.getName()),
-  LAKE_BTC(LakeBTCExchange.class.getName()),
+  //-LAKE_BTC(LakeBTCExchange.class.getName()),
   // MINT_PAL(MintPalExchange.class.getName()),// Feed broken (no response)
   OK_COIN(OkCoinExchange.class.getName()),
-  OPEN_EXCHANGE_RATES(OERExchange.class.getName()),
+  //?OPEN_EXCHANGE_RATES(OERExchange.class.getName()),
   // POLONIEX(PoloniexExchange.class.getName()),// No working feed
   //VAULT_OF_SATOSHI(VaultOfSatoshiExchange.class.getName()), // Out of business
   // VIRCUREX(VircurexExchange.class.getName()), // Broken
@@ -154,6 +154,10 @@ public enum ExchangeKey {
     // All exchanges quote in BTC over XBT at this time
     if ("XBT".equalsIgnoreCase(currencyCode)) {
       return "BTC";
+    }
+
+    if ("XLT".equalsIgnoreCase(currencyCode)) {
+      return "LTC";
     }
 
     // BTC-e uses legacy "RUR" code

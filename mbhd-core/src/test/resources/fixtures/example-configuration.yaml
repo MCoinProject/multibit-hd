@@ -22,7 +22,7 @@ bitcoin:
   currencySymbolLeading: true
   localCurrencySymbol: "$"
   localCurrencyCode: "USD"
-  currentExchange: "BITSTAMP"
+  currentExchange: "BTC_E"
   exchangeApiKeys: {}
 sound:
   alertSound: true
