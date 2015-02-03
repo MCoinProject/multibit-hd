@@ -561,6 +561,7 @@ public enum AwesomeIcon {
   YOUTUBE('\uf167'),
   YOUTUBE_PLAY('\uf16A'),
   YOUTUBE_SQUARE('\uf166'),
+  LITECOIN('\uf20d'),
 
   // End of enum
   ;

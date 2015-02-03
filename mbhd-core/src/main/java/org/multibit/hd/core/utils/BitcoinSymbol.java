@@ -25,51 +25,51 @@ public enum BitcoinSymbol {
   /**
    * The Font Awesome icon (becoming a de facto standard)
    */
-  ICON("", "B", BigDecimal.ONE, 8),
+  ICON("", "L", BigDecimal.ONE, 8),
   /**
    * The Font Awesome icon with milli
    */
-  MICON("m", "mB", new BigDecimal(1_000), 5),
+  MICON("m", "mL", new BigDecimal(1_000), 5),
   /**
    * The Font Awesome icon with micro
    */
-  UICON("\u00b5", "\u00b5B", new BigDecimal(1_000_000), 2),
+  UICON("\u00b5", "\u00b5L", new BigDecimal(1_000_000), 2),
   /**
    * The current de facto standard but may be superseded (cannot be an ISO standard)
    */
-  BTC("BTC", "BTC", BigDecimal.ONE, 8),
+  LTC("LTC", "LTC", BigDecimal.ONE, 8),
   /**
    * A milli in the current de facto standard
    */
-  MBTC("mBTC", "mBTC", new BigDecimal(1_000), 5),
+  MLTC("mLTC", "mLTC", new BigDecimal(1_000), 5),
   /**
    * A micro in the current de facto standard
    */
-  UBTC("\u00b5BTC", "\u00b5BTC", new BigDecimal(1_000_000), 2),
+  ULTC("\u00b5LTC", "\u00b5LTC", new BigDecimal(1_000_000), 2),
   /**
    * A possible ISO standard name
    */
-  XBT("XBT", "XBT", BigDecimal.ONE, 8),
+  XLT("XLT", "XLT", BigDecimal.ONE, 8),
   /**
    * A milli in a possible ISO standard name
    */
-  MXBT("mXBT", "mXBT", new BigDecimal(1_000), 5),
+  MXLT("mXLT", "mXLT", new BigDecimal(1_000), 5),
   /**
    * A micro in a possible ISO standard name
    */
-  UXBT("\u00b5XBT", "µXBT", new BigDecimal(1_000_000), 2),
+  UXLT("\u00b5XLT", "µXLT", new BigDecimal(1_000_000), 2),
   /**
    * The <a href="http://bitcoinsymbol.org">Ecogex alternative symbol</a>
    */
-  ECO("\u0243", "\u0243", BigDecimal.ONE, 8),
+  ECO("\u0141", "\u0141", BigDecimal.ONE, 8),
   /**
    * A milli with the Ecogex alternative symbol
    */
-  MECO("m\u0243", "m\u0243", new BigDecimal(1_000), 5),
+  MECO("m\u0141", "m\u0141", new BigDecimal(1_000), 5),
   /**
    * A micro with the Ecogex alternative symbol
    */
-  UECO("\u00b5\u0243", "\u00b5\u0243", new BigDecimal(1_000_000), 2),
+  UECO("\u00b5\u0141", "\u00b5\u0141", new BigDecimal(1_000_000), 2),
 
   /**
    * Subject of much debate (see <a href="http://www.reddit.com/r/Bitcoin/comments/1rmto3/its_bits/">this Reddit article</a>)
@@ -140,7 +140,7 @@ public enum BitcoinSymbol {
   /**
    * <p>Suitable for use with JLabel with horizontal text leading</p>
    *
-   * @return The (possibly incomplete) textual component of the symbol to display to the user (e.g. "m", "mBTC", "XBT" etc)
+   * @return The (possibly incomplete) textual component of the symbol to display to the user (e.g. "m", "mLTC", "XLT" etc)
    */
   public String getSymbol() {
     return symbol;
@@ -149,7 +149,7 @@ public enum BitcoinSymbol {
   /**
    * <p>Suitable for use with String with Font Awesome icon replaced with B</p>
    *
-   * @return The complete textual symbol to display to the user (e.g. "mB", "XBT" etc)
+   * @return The complete textual symbol to display to the user (e.g. "mB", "XLT" etc)
    */
   public String getTextSymbol() {
 
@@ -178,19 +178,19 @@ public enum BitcoinSymbol {
 
     switch (this) {
       case ICON:
-      case BTC:
-      case XBT:
+      case LTC:
+      case XLT:
       case ECO:
         return "21,000,000.00000000".length();
       case MICON:
-      case MBTC:
-      case MXBT:
+      case MLTC:
+      case MXLT:
       case MECO:
         return "21,000,000,000.00000".length();
       case UICON:
-      case UBTC:
+      case ULTC:
       case BITS:
-      case UXBT:
+      case UXLT:
       case UECO:
         return "21,000,000,000,000.00".length();
       case SATOSHI:
