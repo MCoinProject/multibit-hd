@@ -76,8 +76,8 @@ public class CurrencyUtilsTest {
   @Test
   public void testIsoCandidate() throws Exception {
 
-    assertThat(CurrencyUtils.isoCandidateFor("XBT")).isEqualTo("XBT");
-    assertThat(CurrencyUtils.isoCandidateFor("BTC")).isEqualTo("XBT");
+    assertThat(CurrencyUtils.isoCandidateFor("XLT")).isEqualTo("XLT");
+    assertThat(CurrencyUtils.isoCandidateFor("LTC")).isEqualTo("XLT");
     assertThat(CurrencyUtils.isoCandidateFor("RUR")).isEqualTo("RUB");
     assertThat(CurrencyUtils.isoCandidateFor("USD")).isEqualTo("USD");
 

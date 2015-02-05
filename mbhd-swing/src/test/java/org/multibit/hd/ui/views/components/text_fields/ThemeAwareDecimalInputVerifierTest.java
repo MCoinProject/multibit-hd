@@ -63,22 +63,22 @@ public class ThemeAwareDecimalInputVerifierTest {
     textField.setText("1");
     assertThat(testObject.verify(textField)).isTrue();
 
-    textField.setText("1000"); // 1 BTC
+    textField.setText("1000"); // 1 LTC
     assertThat(testObject.verify(textField)).isTrue();
 
-    textField.setText("20000000000"); // 20 000 000 BTC
+    textField.setText("20000000000"); // 20 000 000 LTC
     assertThat(testObject.verify(textField)).isTrue();
 
-    textField.setText("21000000001"); // 21 000 001 BTC
+    textField.setText("21000000001"); // 21 000 001 LTC
     assertThat(testObject.verify(textField)).isFalse();
 
-    textField.setText("1,000"); // 1 BTC
+    textField.setText("1,000"); // 1 LTC
     assertThat(testObject.verify(textField)).isTrue();
 
-    textField.setText("20,000,000,000"); // 20 000 000 BTC
+    textField.setText("20,000,000,000"); // 20 000 000 LTC
     assertThat(testObject.verify(textField)).isTrue();
 
-    textField.setText("21,000,000,001"); // 21 000 001 BTC
+    textField.setText("21,000,000,001"); // 21 000 001 LTC
     assertThat(testObject.verify(textField)).isFalse();
 
   }

@@ -307,7 +307,7 @@ public class EmptyWalletWizardModel extends AbstractHardwareWalletWizardModel<Em
         // Substitute mBTC for MICON
         String bitcoinSymbolText = bitcoinConfiguration.getBitcoinSymbol();
         if (BitcoinSymbol.MICON.toString().equals(bitcoinSymbolText)) {
-          bitcoinSymbolText = BitcoinSymbol.MBTC.getSymbol();
+          bitcoinSymbolText = BitcoinSymbol.MLTC.getSymbol();
         }
 
         switch (buttonRequest.getButtonRequestType()) {

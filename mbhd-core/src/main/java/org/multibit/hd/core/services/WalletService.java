@@ -338,7 +338,7 @@ public class WalletService extends AbstractService {
     // UpdateTime
     Date updateTime = transaction.getUpdateTime();
 
-    // Amount BTC
+    // Amount LTC
     Coin amountBTC = transaction.getValue(wallet);
 
     // Fiat amount

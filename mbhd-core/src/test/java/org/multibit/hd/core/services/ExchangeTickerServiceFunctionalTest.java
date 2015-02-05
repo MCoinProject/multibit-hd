@@ -50,7 +50,7 @@ public class ExchangeTickerServiceFunctionalTest {
 
     // Use Bitstamp for functional testing
     BitcoinConfiguration bitcoinConfiguration = new BitcoinConfiguration();
-    bitcoinConfiguration.setCurrentExchange(ExchangeKey.BITSTAMP.name());
+    bitcoinConfiguration.setCurrentExchange(ExchangeKey.CRYPTONIT.name());
     bitcoinConfiguration.setLocalCurrencyCode("USD");
 
     ExchangeTickerService testObject = new ExchangeTickerService(bitcoinConfiguration);

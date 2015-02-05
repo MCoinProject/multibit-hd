@@ -147,20 +147,20 @@ public enum ExchangeKey {
    * @param currencyCode The currency code (could be ISO or not)
    * @param exchangeKey  The exchange key
    *
-   * @return The most appropriate exchange code for the offered candidate ISO code (e.g. "XBT" becomes "BTC")
+   * @return The most appropriate exchange code for the offered candidate ISO code (e.g. "XLT" becomes "LTC")
    */
   public static String exchangeCode(String currencyCode, ExchangeKey exchangeKey) {
 
-    // All exchanges quote in BTC over XBT at this time
-    if ("XBT".equalsIgnoreCase(currencyCode)) {
-      return "BTC";
+    // All exchanges quote in LTC over XLT at this time
+    if ("XLT".equalsIgnoreCase(currencyCode)) {
+      return "LTC";
     }
 
     if ("XLT".equalsIgnoreCase(currencyCode)) {
       return "LTC";
     }
 
-    // BTC-e uses legacy "RUR" code
+    // LTC-e uses legacy "RUR" code
     if (ExchangeKey.BTC_E.equals(exchangeKey) && "RUB".equalsIgnoreCase(currencyCode)) {
       return "RUR";
     }

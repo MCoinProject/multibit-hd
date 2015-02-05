@@ -63,7 +63,7 @@ public class CurrencyUtils {
     isoCandidateMap.put("RUB", Lists.newArrayList("RUR"));
 
     // Add non-standard codes and their ISO candidates (usually start with "X" for private codes)
-    isoCandidateMap.put("XBT", Lists.newArrayList("BTC"));
+    isoCandidateMap.put("XLT", Lists.newArrayList("LTC"));
 
   }
 
@@ -348,7 +348,7 @@ public class CurrencyUtils {
   /**
    * <p>Provides the ISO 4217 candidate code for the given input</p>
    * <ul>
-   * <li>"BTC" is not ISO and its ISO candidate is "XBT"</li>
+   * <li>"LTC" is not ISO and its ISO candidate is "XLT"</li>
    * <li>"RUR" is legacy ISO and its ISO replacement is "RUB"</li>
    * <li>"USD" is ISO so no replacement occurs</li>
    * </ul>

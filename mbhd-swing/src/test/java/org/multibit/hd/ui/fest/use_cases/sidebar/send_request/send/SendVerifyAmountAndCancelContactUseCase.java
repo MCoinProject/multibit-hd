@@ -80,23 +80,23 @@ public class SendVerifyAmountAndCancelContactUseCase extends AbstractFestUseCase
     verifyBitcoinAmountField("9.99999", true);
     verifyBitcoinAmountField("0.00001", true); // 1 sat in mBTC
 
-    verifyBitcoinAmountField("1", true); // 1 BTC
+    verifyBitcoinAmountField("1", true); // 1 LTC
     verifyBitcoinAmountField("10", true);
     verifyBitcoinAmountField("100", true);
     verifyBitcoinAmountField("100.0", true);
     verifyBitcoinAmountField("100.00001", true);
-    verifyBitcoinAmountField("1000", true); // 1 BTC
+    verifyBitcoinAmountField("1000", true); // 1 LTC
 
     verifyBitcoinAmountField("1,000", true);
     verifyBitcoinAmountField("1,000.00001", true);
 
-    verifyBitcoinAmountField("1 000", false); // 1,000 BTC
-    verifyBitcoinAmountField("1 000 000 000", false); // 1,000,000 BTC
+    verifyBitcoinAmountField("1 000", false); // 1,000 LTC
+    verifyBitcoinAmountField("1 000 000 000", false); // 1,000,000 LTC
 
-    verifyBitcoinAmountField("21000000000", true); // 21,000,000 BTC
+    verifyBitcoinAmountField("21000000000", true); // 21,000,000 LTC
     verifyBitcoinAmountField("20000000000.12345", true); // 20,000,000,000.12345 mBTC
 
-    verifyBitcoinAmountField("21,000,000,000", true); // 21,000,000 BTC
+    verifyBitcoinAmountField("21,000,000,000", true); // 21,000,000 LTC
     verifyBitcoinAmountField("20,000,000,000.12345", true); // 20,000,000,000.12345 mBTC
 
     // Cancel from wizard

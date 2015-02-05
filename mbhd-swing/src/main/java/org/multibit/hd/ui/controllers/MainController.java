@@ -961,19 +961,18 @@ public class MainController extends AbstractController implements
     BitcoinConfiguration bitcoinConfiguration = Configurations.currentConfiguration.getBitcoin();
     ExchangeKey exchangeKey;
     try {
-      exchangeKey = ExchangeKey.valueOf(bitcoinConfiguration.getCurrentExchange());
+//      exchangeKey = ExchangeKey.valueOf(bitcoinConfiguration.getCurrentExchange());
+//      if (ExchangeKey.OPEN_EXCHANGE_RATES.equals(exchangeKey)) {
+//          if (bitcoinConfiguration.getExchangeApiKeys().containsKey(ExchangeKey.OPEN_EXCHANGE_RATES.name())) {
+//              String apiKey = Configurations.currentConfiguration.getBitcoin().getExchangeApiKeys().get(ExchangeKey.OPEN_EXCHANGE_RATES.name());
+//              exchangeKey.getExchange().get().getExchangeSpecification().setApiKey(apiKey);
+//          }
+//      }
     } catch (IllegalArgumentException e) {
       // Exchange in configuration is not supported
       exchangeKey = ExchangeKey.NONE;
       Configurations.currentConfiguration.getBitcoin().setCurrentExchange(exchangeKey.name());
       Configurations.persistCurrentConfiguration();
-    }
-
-    if (ExchangeKey.OPEN_EXCHANGE_RATES.equals(exchangeKey)) {
-      if (bitcoinConfiguration.getExchangeApiKeys().containsKey(ExchangeKey.OPEN_EXCHANGE_RATES.name())) {
-        String apiKey = Configurations.currentConfiguration.getBitcoin().getExchangeApiKeys().get(ExchangeKey.OPEN_EXCHANGE_RATES.name());
-        exchangeKey.getExchange().get().getExchangeSpecification().setApiKey(apiKey);
-      }
     }
 
     // Stop (with block) any existing exchange ticker service

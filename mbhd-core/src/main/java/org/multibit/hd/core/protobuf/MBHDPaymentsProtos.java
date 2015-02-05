@@ -102,7 +102,7 @@ public final class MBHDPaymentsProtos {
      * <code>optional string rate = 4;</code>
      *
      * <pre>
-     * The exchange rate used in the definition of the fiat amount (this is the price of 1 BTC in the fiat currency)
+     * The exchange rate used in the definition of the fiat amount (this is the price of 1 LTC in the fiat currency)
      * </pre>
      */
     boolean hasRate();
@@ -110,7 +110,7 @@ public final class MBHDPaymentsProtos {
      * <code>optional string rate = 4;</code>
      *
      * <pre>
-     * The exchange rate used in the definition of the fiat amount (this is the price of 1 BTC in the fiat currency)
+     * The exchange rate used in the definition of the fiat amount (this is the price of 1 LTC in the fiat currency)
      * </pre>
      */
     java.lang.String getRate();
@@ -118,7 +118,7 @@ public final class MBHDPaymentsProtos {
      * <code>optional string rate = 4;</code>
      *
      * <pre>
-     * The exchange rate used in the definition of the fiat amount (this is the price of 1 BTC in the fiat currency)
+     * The exchange rate used in the definition of the fiat amount (this is the price of 1 LTC in the fiat currency)
      * </pre>
      */
     com.google.protobuf.ByteString
@@ -412,7 +412,7 @@ public final class MBHDPaymentsProtos {
      * <code>optional string rate = 4;</code>
      *
      * <pre>
-     * The exchange rate used in the definition of the fiat amount (this is the price of 1 BTC in the fiat currency)
+     * The exchange rate used in the definition of the fiat amount (this is the price of 1 LTC in the fiat currency)
      * </pre>
      */
     public boolean hasRate() {
@@ -422,7 +422,7 @@ public final class MBHDPaymentsProtos {
      * <code>optional string rate = 4;</code>
      *
      * <pre>
-     * The exchange rate used in the definition of the fiat amount (this is the price of 1 BTC in the fiat currency)
+     * The exchange rate used in the definition of the fiat amount (this is the price of 1 LTC in the fiat currency)
      * </pre>
      */
     public java.lang.String getRate() {
@@ -443,7 +443,7 @@ public final class MBHDPaymentsProtos {
      * <code>optional string rate = 4;</code>
      *
      * <pre>
-     * The exchange rate used in the definition of the fiat amount (this is the price of 1 BTC in the fiat currency)
+     * The exchange rate used in the definition of the fiat amount (this is the price of 1 LTC in the fiat currency)
      * </pre>
      */
     public com.google.protobuf.ByteString
@@ -1068,7 +1068,7 @@ public final class MBHDPaymentsProtos {
        * <code>optional string rate = 4;</code>
        *
        * <pre>
-       * The exchange rate used in the definition of the fiat amount (this is the price of 1 BTC in the fiat currency)
+       * The exchange rate used in the definition of the fiat amount (this is the price of 1 LTC in the fiat currency)
        * </pre>
        */
       public boolean hasRate() {
@@ -1078,7 +1078,7 @@ public final class MBHDPaymentsProtos {
        * <code>optional string rate = 4;</code>
        *
        * <pre>
-       * The exchange rate used in the definition of the fiat amount (this is the price of 1 BTC in the fiat currency)
+       * The exchange rate used in the definition of the fiat amount (this is the price of 1 LTC in the fiat currency)
        * </pre>
        */
       public java.lang.String getRate() {
@@ -1096,7 +1096,7 @@ public final class MBHDPaymentsProtos {
        * <code>optional string rate = 4;</code>
        *
        * <pre>
-       * The exchange rate used in the definition of the fiat amount (this is the price of 1 BTC in the fiat currency)
+       * The exchange rate used in the definition of the fiat amount (this is the price of 1 LTC in the fiat currency)
        * </pre>
        */
       public com.google.protobuf.ByteString
@@ -1116,7 +1116,7 @@ public final class MBHDPaymentsProtos {
        * <code>optional string rate = 4;</code>
        *
        * <pre>
-       * The exchange rate used in the definition of the fiat amount (this is the price of 1 BTC in the fiat currency)
+       * The exchange rate used in the definition of the fiat amount (this is the price of 1 LTC in the fiat currency)
        * </pre>
        */
       public Builder setRate(
@@ -1133,7 +1133,7 @@ public final class MBHDPaymentsProtos {
        * <code>optional string rate = 4;</code>
        *
        * <pre>
-       * The exchange rate used in the definition of the fiat amount (this is the price of 1 BTC in the fiat currency)
+       * The exchange rate used in the definition of the fiat amount (this is the price of 1 LTC in the fiat currency)
        * </pre>
        */
       public Builder clearRate() {
@@ -1146,7 +1146,7 @@ public final class MBHDPaymentsProtos {
        * <code>optional string rate = 4;</code>
        *
        * <pre>
-       * The exchange rate used in the definition of the fiat amount (this is the price of 1 BTC in the fiat currency)
+       * The exchange rate used in the definition of the fiat amount (this is the price of 1 LTC in the fiat currency)
        * </pre>
        */
       public Builder setRateBytes(

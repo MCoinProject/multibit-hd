@@ -65,7 +65,7 @@ public class Coins {
   }
 
   /**
-   * @param plainAmount A big decimal denominated in BTC (e.g. 0.0015)
+   * @param plainAmount A big decimal denominated in LTC (e.g. 0.0015)
    *
    * @return The satoshi value (e.g. 150 000)
    */
@@ -77,7 +77,7 @@ public class Coins {
   }
 
   /**
-   * @param plainAmount A String denominated in BTC (e.g. "0.0015")
+   * @param plainAmount A String denominated in LTC (e.g. "0.0015")
    *
    * @return The satoshi value (e.g. 150 000)
    */

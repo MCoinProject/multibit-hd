@@ -503,7 +503,7 @@ public class ComboBoxes {
    * @param listener             The action listener to alert when the selection is made
    * @param bitcoinConfiguration The Bitcoin configuration to use
    *
-   * @return A new "Bitcoin symbol" combo box (e.g. "mB", "XBT" etc)
+   * @return A new "Bitcoin symbol" combo box (e.g. "mB", "XLT" etc)
    */
   public static JComboBox<BitcoinSymbol> newBitcoinSymbolComboBox(ActionListener listener, BitcoinConfiguration bitcoinConfiguration) {
 

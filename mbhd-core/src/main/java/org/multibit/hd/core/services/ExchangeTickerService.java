@@ -221,7 +221,7 @@ public class ExchangeTickerService extends AbstractService {
 
     // Apply any exchange quirks to the counter code (e.g. ISO "RUB" -> legacy "RUR")
     final String exchangeCounterCode = ExchangeKey.exchangeCode(localCurrency.getCurrencyCode(), exchangeKey);
-    final String exchangeBaseCode = ExchangeKey.exchangeCode("XBT", exchangeKey);
+    final String exchangeBaseCode = ExchangeKey.exchangeCode("XLT", exchangeKey);
 
     // Perform an asynchronous call to the exchange
     return latestTickerExecutorService.submit(
@@ -235,16 +235,16 @@ public class ExchangeTickerService extends AbstractService {
             return getEmptyTicker();
           }
 
-          if (ExchangeKey.OPEN_EXCHANGE_RATES.equals(exchangeKey)) {
-
-            // Triangulate through USD to reach exchange rate
-            return getTriangulatedTicker();
-
-          } else {
+//          if (ExchangeKey.OPEN_EXCHANGE_RATES.equals(exchangeKey)) {
+//
+//            // Triangulate through USD to reach exchange rate
+//            return getTriangulatedTicker();
+//
+//          } else {
 
             // Crypto-exchange is straightforward
             return getDirectTicker();
-          }
+//          }
         }
 
         private Ticker getDirectTicker() throws IOException {
@@ -261,7 +261,7 @@ public class ExchangeTickerService extends AbstractService {
           log.debug("OER triangulated ticker");
 
           CurrencyPair localToUsdPair = new CurrencyPair(exchangeCounterCode, "USD");
-          CurrencyPair bitcoinToUsdPair = new CurrencyPair("BTC", "USD");
+          CurrencyPair bitcoinToUsdPair = new CurrencyPair("LTC", "USD");
 
           // Need to triangulate through USD
           Ticker inverseLocalToUsdTicker = exchange.get().getPollingMarketDataService().getTicker(localToUsdPair);
@@ -321,7 +321,7 @@ public class ExchangeTickerService extends AbstractService {
         public String[] call() throws Exception {
 
           if (ExchangeKey.NONE.equals(exchangeKey)) {
-            return new String[]{"BTC"};
+            return new String[]{"LTC"};
           }
 
           Locale currentLocale = Configurations.currentConfiguration.getLocale();
@@ -348,7 +348,7 @@ public class ExchangeTickerService extends AbstractService {
           SortedSet<String> allCurrencies = Sets.newTreeSet();
           for (CurrencyPair currencyPair : currencyPairs) {
 
-            // Add the currency (if non-BTC we can triangulate through USD)
+            // Add the currency (if non-LTC we can triangulate through USD)
             String baseCode = currencyPair.baseSymbol;
             String counterCode = currencyPair.counterSymbol;
 
@@ -369,7 +369,7 @@ public class ExchangeTickerService extends AbstractService {
                 allCurrencies.add(baseCode + " (" + localName + ")");
               }
             } catch (IllegalArgumentException e) {
-              // Base code is not in ISO 4217 so attempt to locate counter currency (e.g. BTC/RUR)
+              // Base code is not in ISO 4217 so attempt to locate counter currency (e.g. LTC/RUR)
               try {
                 // Use JVM to determine supported currency
                 Currency counter = Currency.getInstance(counterCode);

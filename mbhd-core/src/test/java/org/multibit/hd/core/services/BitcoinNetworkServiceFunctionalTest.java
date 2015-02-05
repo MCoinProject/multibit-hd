@@ -50,8 +50,8 @@ public class BitcoinNetworkServiceFunctionalTest {
   private static final String WALLET_TIMESTAMP_1_PROPERTY_NAME = "walletTimestamp1";
   private static final String WALLET_TIMESTAMP_2_PROPERTY_NAME = "walletTimestamp2";
 
-  private static final Coin SEND_AMOUNT = Coin.valueOf(100000); // 0.001 BTC
-  private static final Coin FEE_PER_KB = Coin.valueOf(10000); // 0.0001 BTC / KB
+  private static final Coin SEND_AMOUNT = Coin.valueOf(100000); // 0.001 LTC
+  private static final Coin FEE_PER_KB = Coin.valueOf(10000); // 0.0001 LTC / KB
 
   private static final int MAX_TIMEOUT = 600000; // ms
   private static final int WAIT_INTERVAL = 100; // ms

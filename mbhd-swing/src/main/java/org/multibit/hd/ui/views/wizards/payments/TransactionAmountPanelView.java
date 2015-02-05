@@ -80,7 +80,7 @@ public class TransactionAmountPanelView extends AbstractWizardPanelView<Payments
     // Apply the theme
     contentPanel.setBackground(Themes.currentTheme.detailPanelBackground());
 
-    // Create amount BTC label, text value is added in updateAmountCoin()
+    // Create amount LTC label, text value is added in updateAmountCoin()
     amountBTCLabel = Labels.newValueLabel("");
 
     amountBTCValue = Labels.newValueLabel("");

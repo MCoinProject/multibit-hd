@@ -132,7 +132,7 @@ public class CoinsTest {
   public void testFromSymbolicAmount_BTC_XBT() throws Exception {
 
     // Bitcoin symbol
-    BitcoinSymbol bitcoinSymbol = BitcoinSymbol.BTC;
+    BitcoinSymbol bitcoinSymbol = BitcoinSymbol.LTC;
 
     // Large
     BigDecimal localAmount1 = new BigDecimal("20999999.12345678");
@@ -164,7 +164,7 @@ public class CoinsTest {
   public void testFromSymbolicAmount_mBTC_mXBT() throws Exception {
 
     // Bitcoin symbol
-    BitcoinSymbol bitcoinSymbol = BitcoinSymbol.MBTC;
+    BitcoinSymbol bitcoinSymbol = BitcoinSymbol.MLTC;
 
     // Large
     BigDecimal localAmount1 = new BigDecimal("20999999123.45678");
@@ -196,7 +196,7 @@ public class CoinsTest {
   public void testFromSymbolicAmount_uBTC_uXBT() throws Exception {
 
     // Bitcoin symbol
-    BitcoinSymbol bitcoinSymbol = BitcoinSymbol.UBTC;
+    BitcoinSymbol bitcoinSymbol = BitcoinSymbol.ULTC;
 
     // Large
     BigDecimal localAmount1 = new BigDecimal("20999999123456.78");
@@ -260,7 +260,7 @@ public class CoinsTest {
   public void testToSymbolicAmount_BTC_XBT() throws Exception {
 
     // Bitcoin symbol
-    BitcoinSymbol bitcoinSymbol = BitcoinSymbol.BTC;
+    BitcoinSymbol bitcoinSymbol = BitcoinSymbol.LTC;
 
     // Large
     Coin localAmount1 = Coin.parseCoin("20999999.12345678");
@@ -292,7 +292,7 @@ public class CoinsTest {
   public void testToSymbolicAmount_mBTC_mXBT() throws Exception {
 
     // Bitcoin symbol
-    BitcoinSymbol bitcoinSymbol = BitcoinSymbol.MBTC;
+    BitcoinSymbol bitcoinSymbol = BitcoinSymbol.MLTC;
 
     // Large
     Coin localAmount1 = Coin.parseCoin("20999999.12345678");
@@ -324,7 +324,7 @@ public class CoinsTest {
   public void testToSymbolicAmount_uBTC_uXBT() throws Exception {
 
     // Bitcoin symbol
-    BitcoinSymbol bitcoinSymbol = BitcoinSymbol.UBTC;
+    BitcoinSymbol bitcoinSymbol = BitcoinSymbol.ULTC;
 
     // Large
     Coin localAmount1 = Coin.parseCoin("20999999.12345678");

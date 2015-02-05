@@ -123,7 +123,7 @@ public class Tables {
     typeTableColumn.setCellRenderer(Renderers.newPaymentTypeRenderer());
     resizeColumn(table, PaymentTableModel.TYPE_COLUMN_INDEX, 100, 120);
 
-    // Amount BTC column
+    // Amount LTC column
     TableColumn column = table.getColumnModel().getColumn(PaymentTableModel.AMOUNT_BTC_COLUMN_INDEX);
     column.setHeaderRenderer(new AmountBTCTableHeaderRenderer(
       table.getTableHeader().getDefaultRenderer(),
@@ -164,7 +164,7 @@ public class Tables {
     Comparator<PaymentType> comparatorPaymentType = newPaymentTypeComparator();
     rowSorter.setComparator(PaymentTableModel.TYPE_COLUMN_INDEX, comparatorPaymentType);
 
-    // Comparator for amount BTC
+    // Comparator for amount LTC
     Comparator<Coin> comparatorCoin = newCoinComparator();
     rowSorter.setComparator(PaymentTableModel.AMOUNT_BTC_COLUMN_INDEX, comparatorCoin);
 
