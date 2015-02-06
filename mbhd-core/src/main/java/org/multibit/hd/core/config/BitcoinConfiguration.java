@@ -39,7 +39,7 @@ public class BitcoinConfiguration {
    * Start with "Bitstamp" since it provides USD (the global reserve currency)
    * Did consider "None" but users generally change settings for editing not discovering
    */
-  private String currentExchange = "BITBAY";
+  private String currentExchange = "BITSTAMP";
 
   /**
    * The exchange API keys (required for OER and some rate-limited exchanges)
