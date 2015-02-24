@@ -7,6 +7,7 @@ import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.xeiam.xchange.dto.marketdata.Ticker;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import net.miginfocom.swing.MigLayout;
 import org.multibit.hd.core.config.BitcoinConfiguration;
 import org.multibit.hd.core.config.Configuration;
@@ -258,6 +259,7 @@ public class ExchangeSettingsPanelView extends AbstractWizardPanelView<ExchangeS
   }
 
   @Override
+  @SuppressFBWarnings(value = "DLS")
   public boolean beforeHide(boolean isExitCancel) {
 
     if (!isExitCancel) {
@@ -677,6 +679,7 @@ public class ExchangeSettingsPanelView extends AbstractWizardPanelView<ExchangeS
   /**
    * @param visible True to make the label and text field visible
    */
+  @SuppressFBWarnings(value = "DLS")
   private void setApiKeyVisibility(boolean visible) {
 
     if (!hasComponents()) {
