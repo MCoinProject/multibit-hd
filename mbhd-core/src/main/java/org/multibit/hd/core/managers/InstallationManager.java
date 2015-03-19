@@ -43,7 +43,7 @@ public class InstallationManager {
   public static final String MBHD_WEBSITE_HELP_DOMAIN = "https://beta.multibit.org";  // TODO remove beta when release-4.0.0 website pushed to multibit.org
   public static final String MBHD_WEBSITE_HELP_BASE = MBHD_WEBSITE_HELP_DOMAIN + "/hd0.1";
 
-  public static final String MBHD_APP_NAME = "MultiBitHD";
+  public static final String MBHD_APP_NAME = "MultiBitLTC";
   public static final String MBHD_PREFIX = "mbhd";
   public static final String MBHD_CONFIGURATION_FILE = MBHD_PREFIX + ".yaml";
 
